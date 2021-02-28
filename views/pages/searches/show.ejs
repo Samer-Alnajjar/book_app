@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/style.css">
+  <title>Book Results</title>
+</head>
+<body>
+  <h1>Show Book results</h1>
+  <% booksResults.forEach(data =>{ %>
+    <section>
+      <div>
+        <div>
+          <img src="<%=data.img%>" alt="">
+        </div>
+        <h3><%=data.bookTitle%></h3>
+        <h5><%=data.authorNames%></h5>
+      </div>
+      <div>
+        <p><%=data.description%></p>
+      </div>
+    </section>
+  <% }) %>
+
+</body>
+</html>

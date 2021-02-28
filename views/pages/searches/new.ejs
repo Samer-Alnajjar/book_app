@@ -8,6 +8,15 @@
 </head>
 <body>
   <h1>Search by Title and Author</h1>
-  <form action="" method=""></form>
+  <form action="/searches" method="POST">
+    <input type="text" name="q" placeholder="search for title or author">
+
+    <label for="author">Author</label>
+    <input id="author" type="radio" name="searchBy" value="author">
+    <label for="title">Title</label>
+    <input id="title" type="radio" name="searchBy" value="title">
+
+    <input type="submit">
+  </form>
 </body>
 </html>
