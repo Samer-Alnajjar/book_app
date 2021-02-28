@@ -36,15 +36,80 @@ This application will provide the user to search for any book either by title or
 ## Credits and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
-<!-- ====================================================== -->
+======================================================
 
 
-Number and name of feature: ________________________________
+Number and name of feature: setting up the files
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1 hour
 
-Start time: _____
+Start time: 1:30
 
-Finish time: _____
+Finish time: 1:45
 
-Actual time needed to complete: _____
+Actual time needed to complete: 0.15
+
+======================================================
+
+
+Number and name of feature: create the /hello directory
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 1:45
+
+Finish time: 2:15
+
+Actual time needed to complete: 0.30
+
+======================================================
+
+
+Number and name of feature: create book constructor with superagent
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 2:15
+
+Finish time: 3:15
+
+Actual time needed to complete: 1 hour
+
+======================================================
+
+
+Number and name of feature: create post request "/searches"
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 3:15
+
+Finish time: 3:45
+
+Actual time needed to complete: 0.30 hour
+
+======================================================
+
+
+Number and name of feature: create error.ejs
+
+Estimate of time needed to complete: 0.30 hour
+
+Start time: 3:45
+
+Finish time: 4:00
+
+Actual time needed to complete: 0.15 hour
+
+
+======================================================
+
+
+Number and name of feature: create home directory "/"
+Estimate of time needed to complete: 0.15 hour
+
+Start time: 4:00
+
+Finish time: 4:15
+
+Actual time needed to complete: 0.15 hour
