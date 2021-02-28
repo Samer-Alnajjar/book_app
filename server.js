@@ -27,6 +27,10 @@ app.get('/searches/new', (req, res) => {
 
 app.post('/searches', handleAPIData);
 
+app.get("*", (req, res) => {
+  res.render("pages/error");
+})
+
 
 
 //handlers function
@@ -55,9 +59,11 @@ function handleAPIData(req, res) {
     })
     .catch(error => {
       console.log('Error reading from API', error);
+      res.render("pages/error");
     })
   } catch {
     console.log('error from try and catch');
+    res.render("pages/error");
   }
 
 }
