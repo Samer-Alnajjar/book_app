@@ -31,9 +31,11 @@ app.post('/searches', handleAPIData);
 
 //handlers function
 function handleAPIData(req, res) {
-  let formInput = req.body;
   let arrayOfObjects = [];
-  let searchQuery = formInput.q+"+in"+formInput.searchBy;
+
+  // To check what the user entered
+  let searchQuery = checkQuery(req);
+ 
   
   let query = {
     q : searchQuery
@@ -49,7 +51,7 @@ function handleAPIData(req, res) {
         arrayOfObjects.push(new Book (data));
       });
 
-      res.render('pages/searches/show.ejs', { booksResults : arrayOfObjects});
+      res.render('pages/searches/show', { booksResults : arrayOfObjects});
     })
     .catch(error => {
       console.log('Error reading from API', error);
@@ -60,10 +62,27 @@ function handleAPIData(req, res) {
 
 }
 
+function checkQuery(req) {
+  let formInput = req.body;
+  if(formInput.q.includes("+")) {
+    let q = formInput.q.split("+")[0];
+    let name = formInput.q.split("+")[1];
+    return q+"+in"+formInput.searchBy+":"+name;
+  } else {
+    return formInput.q+"+in"+formInput.searchBy;
+  }
+}
+
 // constructors
 function Book(bookData) {
-  let modifiedImg = bookData.volumeInfo.imageLinks.thumbnail.split(":")[1];
-  this.img = `https:${modifiedImg}` || `https://i.imgur.com/J5LVHEL.jpg`;
+  if(bookData.volumeInfo.imageLinks === undefined) {
+    let imageLinks = {thumbnail: `https://i.imgur.com/J5LVHEL.jpg`}
+    var modifiedImg = bookData.volumeInfo = imageLinks;
+  } else {
+    var modifiedImg = bookData.volumeInfo.imageLinks.thumbnail.split(":")[1];
+  }
+  
+  this.img = `https:${modifiedImg}`;
   this.bookTitle = bookData.volumeInfo.title || "NA";
   this.authorNames = bookData.volumeInfo.authors || "NA";
   this.description = bookData.volumeInfo.description || "NA";
