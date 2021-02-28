@@ -32,6 +32,11 @@ This application will provide the user to search for any book either by title or
 <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples: -->
 
 28-02-2021 1:45pm - MAke the application load quickly.
+28-02-2021 2:15pm - create the /hello directory.
+28-02-2021 3:15pm - create book constructor with superagent.
+28-02-2021 3:45pm - create post request "/searches".
+28-02-2021 4:00pm - create error.ejs.
+28-02-2021 4:15pm - create home directory "/".
 
 ## Credits and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
