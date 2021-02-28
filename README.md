@@ -67,7 +67,7 @@ Finish time: 2:15
 
 Actual time needed to complete: 0.30
 
-===============================
+=============================================================================
 
 
 Number and name of feature: create book constructor with superagent
