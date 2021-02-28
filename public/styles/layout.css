@@ -1,0 +1,20 @@
+.show{
+    width: 100%;
+    background-color: rgb(88, 88, 88);
+    color: #eeeeee;
+    height: 20px;
+    text-align: center;
+    padding: 10px 0 10px 0;
+  
+  }
+  section{
+    background-color: #f8f8f8;
+    margin: 8%;
+    padding: 4%;
+    text-align: center;
+    border: solid #eeeeee 2px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px 0 rgba(85, 85, 85, 0.376), 0 6px 20px 0 rgba(78, 77, 77, 0.445);
+    overflow: hidden;
+    height: 380px;
+  }
