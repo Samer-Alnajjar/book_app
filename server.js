@@ -27,6 +27,10 @@ app.get('/searches/new', (req, res) => {
 
 app.post('/searches', handleAPIData);
 
+app.get("/", (req, res) => {
+  res.render("pages/indexed");
+})
+
 app.get("*", (req, res) => {
   res.render("pages/error");
 })
