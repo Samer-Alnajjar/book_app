@@ -7,7 +7,7 @@
     <%- include("../layout/header")%>
 
     <div class="show">
-        <h1><span>
+        <h1><span class="len">
                 <%= counter %>
             </span> Saved Books</h1>
     </div>
@@ -15,12 +15,14 @@
         <% book_data.forEach(data=>{ %>
             <section>
                 <%- include('books/detail',{book:data})%>
-                <div><a href="/books/<%=data.id%>">Show Details</a></div> 
+                </div>
+                <div><a class="a-btn" href="/books/<%=data.id%>">Show Details</a></div> 
             </section>
         <% }) %>
     </main>
-    
+
 <%- include("../layout/footer")%>
+
 
 </body>
 

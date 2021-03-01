@@ -1,26 +1,29 @@
 img{
     border: black solid 1px;
     border-radius: 5px;
+    height: 100%;
   }
   .title{
-    font-size: 22px;
-    font-weight: 150;
+    font-size: 20px;
+    font-weight: 100;
     padding: 5%;
   }
   .author{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 100;
     padding: 4%;
     margin-bottom: 10px;
+
   
   }
-  #para{
-    padding: 2% 0 2% 0;
-    overflow: auto;
+  
+  .inside{
+    margin: 1%;
+    overflow: scroll;
   }
   section:hover {
   
-    border: rgb(61, 61, 61) 2px solid;
+    border: rgba(109, 105, 105, 0.692) 2px solid;
   
   }
 
@@ -29,29 +32,49 @@ input[type=submit]{
     width: 90%;
     margin: 10% 4% 4% 4%;
     padding: 2%;
-    border: solid black 2px;
+    border: solid black 1px;
     border-radius: 5px;
   }
   input[type=text]{
     width: 85%;
     margin: 5% 2% 3% 2%;
     padding: 2%;
-    border: solid black 2px;
+    border: solid rgb(165, 98, 98) 1px;
     border-radius: 5px;
   }
   input[type=radio]{
-    width: 20%;
     margin: 4%;
     padding: 2%;
+
   
   }
   label{
     padding-left: 20px;
     font-size: 20px;
     border-radius: 5px;
-  }
+    width: 40%;
 
-  .pr{
-      height: 80px;
-      overflow: auto;
+
+  }
+  button{
+    width: 100%;
+    background-color: #121212;
+    color: #eeeeee;
+    border-radius: 5px;
+    border: #eeeeee solid 1px;
+    padding: 10px 0 10px 0;
+  }
+  .burger{
+    width: 70px;
+    justify-self: end;
+    text-align: center;
+    
+  }
+  .len{
+    background-color: black;
+    color: #eeeeee;
+    padding:  4px 3px 4px 8px;
+    margin-right: 8px;
+    width: 50px;
+    border-radius: 50%;
   }
