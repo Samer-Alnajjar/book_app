@@ -18,9 +18,9 @@ app.use(express.urlencoded({ extended: true }));
 const client = new pg.Client(process.env.DATABASE_URL);
 
 // routes
-app.get('/hello', (req, res) => {
-  res.render('pages/index');
-})
+// app.get('/hello', (req, res) => {
+//   res.render('pages/index');
+// })
 
 app.get('/searches/new', (req, res) => {
   // console.log(req.query);
@@ -31,7 +31,9 @@ app.post('/searches', handleAPIData);
 
 app.get("/", checkDB)
 
-app.get('/books/:id', viewDetails)
+app.get('/books/:id', viewDetails);
+
+app.post('/books', storeToDB);
 
 
 app.get("*", (req, res) => {
@@ -65,18 +67,43 @@ function viewDetails(req, res) {
   let selectQ = `select * from book where id = $1;`;
   let saveValue = [id];
 
+  console.log(saveValue);
+
   client.query(selectQ, saveValue).then((data) => {
 
-    res.render('pages/books/show',{book:data.rows[0]});
+    res.render('pages/books/show', { book: data.rows[0] });
 
   }).catch(error => {
-      console.log('error no detials', error);
-    });
+    console.log('error no details', error);
+  });
 
 }
 
+function storeToDB(req, res) {
+  let formBody = req.body;
+
+  // Inserting to the database
+  let insertQuery = `INSERT INTO book(author, title, image_url, description) VALUES ($1, $2, $3, $4);`;
+  let safeValues = [formBody.author, formBody.title, formBody.img, formBody.description];
+
+  client.query(insertQuery, safeValues)
+    .then(data => {
+      console.log("Data added to the database");
+    })
+    .catch(error => {
+      console.log('Error occurred when storing to DATABASE', error);
+    })
 
 
+  // reading the ID from the database
+  let searchQuery = `SELECT * FROM book where title=$1;`;
+  let secureValues = [formBody.title];
+  client.query(searchQuery, secureValues).then(data => {
+    res.redirect(`/books/${data.rows[0].id}`);
+  }).catch(error => {
+      console.log(`error getting the id from the database, ${error}`);
+    })
+}
 
 function handleAPIData(req, res) {
   let arrayOfObjects = [];

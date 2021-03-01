@@ -1,32 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/styles/style.css">
-  <title>Book Results</title>
-</head>
-<body>
-  
-  <header><h1>Best Book!</h1></header>
 
-  <div class="show"><h1>Show Books Results</h1></div>
-<main class="main">
-  <% booksResults.forEach(data =>{ %>
-    <section>
-      <div class="img-outer">
-        <div>
-          <img src="<%=data.img%>" alt="">
+  <%- include("../../layout/head")%>
+
+
+<body>
+
+  <%- include("../../layout/header")%>
+
+
+  <div class="show">
+    <h1>Show Books Results</h1>
+  </div>
+  <main class="main">
+    <% booksResults.forEach(data=>{ %>
+      <section>
+        <div class="img-outer">
+          <div>
+            <img src="<%=data.img%>" alt="">
+          </div>
+          <h3 class="title">
+            <%=data.bookTitle%>
+          </h3>
+          <h5 class="author">
+            <%=data.authorNames%>
+          </h5>
         </div>
-        <h3 class="title"><%=data.bookTitle%></h3>
-        <h5 class="author"><%=data.authorNames%></h5>
-      </div>
-      <div class="pr">
-        <p id="para"><%=data.description%></p>
-      </div>
-    </section>
-  <% }) %>
-</main>
+        <div class="pr">
+          <p id="para">
+            <%=data.description%>
+          </p>
+        </div>
+        <form action="/books" method="POST">
+          <input type="text" style="display:none" name="img" value="<%=data.img%>">
+          <input type="text" style="display:none" name="title" name="searchBy" value="<%=data.bookTitle%>">
+          <input type="text" style="display:none" name="author" value="<%=data.authorNames%>">
+          <input type="text" style="display:none" name="description" value="<%=data.description%>">
+          <button type="submit">Select this Book</button>
+        </form>
+      </section>
+      <% }) %>
+  </main>
+
+<%- include("../../layout/footer")%>
+
 </body>
+
 </html>
