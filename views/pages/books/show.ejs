@@ -14,16 +14,16 @@
     <header>
         <h1>Best Book!</h1>
     </header>
-
-    <div class="show">
-
-        <h1>Saved Books</h1>
-
-    </div>
     <main class="main">
-
-        <%- include('./detail')%>
-        <div> <a href="/">Home</a></div>
+        <section>
+            <%- include('./detail')%>
+            <div class="pr">
+                <p id="para">
+                    <%= book.description %>
+                </p>
+            </div>
+            <div> <a href="/">Home</a></div>
+        </section>
     </main>
 </body>
 

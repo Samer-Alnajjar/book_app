@@ -16,12 +16,17 @@
     </header>
 
     <div class="show">
-        <h1><span><%= counter %></span> Saved Books</h1>
+        <h1><span>
+                <%= counter %>
+            </span> Saved Books</h1>
     </div>
     <main class="main">
         <% book_data.forEach(data=>{ %>
-          <%- include('books/detail',{book:data})%>
-            <% }) %>
+            <section>
+                <%- include('books/detail',{book:data})%>
+                <div><a href="/books/<%=data.id%>">Show Details</a></div> 
+            </section>
+        <% }) %>
     </main>
 </body>
 

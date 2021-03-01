@@ -18,9 +18,9 @@ app.use(express.urlencoded({ extended: true }));
 const client = new pg.Client(process.env.DATABASE_URL);
 
 // routes
-app.get('/hello', (req, res) => {
-  res.render('pages/index');
-})
+// app.get('/hello', (req, res) => {
+//   res.render('pages/index');
+// })
 
 app.get('/searches/new', (req, res) => {
   // console.log(req.query);
@@ -32,6 +32,8 @@ app.post('/searches', handleAPIData);
 app.get("/", checkDB)
 
 app.get('/books/:id', viewDetails)
+
+// app.post('/books'. storeToDB);
 
 
 app.get("*", (req, res) => {
@@ -70,13 +72,14 @@ function viewDetails(req, res) {
     res.render('pages/books/show',{book:data.rows[0]});
 
   }).catch(error => {
-      console.log('error no detials', error);
+      console.log('error no details', error);
     });
 
 }
 
-
-
+function storeToDB(req, res) {
+  console.log(req.body);
+}
 
 function handleAPIData(req, res) {
   let arrayOfObjects = [];

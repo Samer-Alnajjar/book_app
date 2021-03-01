@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,26 +8,33 @@
   <link rel="stylesheet" href="/styles/style.css">
   <title>Book Results</title>
 </head>
-<body>
-  
-  <header><h1>Best Book!</h1></header>
 
-  <div class="show"><h1>Show Books Results</h1></div>
-<main class="main">
-  <% booksResults.forEach(data =>{ %>
-    <section>
-      <div class="img-outer">
-        <div>
-          <img src="<%=data.img%>" alt="">
+<body>
+
+  <header>
+    <h1>Best Book!</h1>
+  </header>
+
+  <div class="show">
+    <h1>Show Books Results</h1>
+  </div>
+  <main class="main">
+    <% booksResults.forEach(data=>{ %>
+      <section>
+        <div class="img-outer">
+          <div>
+            <img src="<%=data.img%>" alt="">
+          </div>
+          <h3 class="title"><%=data.bookTitle%></h3>
+          <h5 class="author"><%=data.authorNames%></h5>
         </div>
-        <h3 class="title"><%=data.bookTitle%></h3>
-        <h5 class="author"><%=data.authorNames%></h5>
-      </div>
-      <div class="pr">
-        <p id="para"><%=data.description%></p>
-      </div>
-    </section>
-  <% }) %>
-</main>
+        <div class="pr">
+          <p id="para"><%=data.description%></p>
+        </div>
+        <div><a href="#%">Select this Book</a></div>
+      </section>
+      <% }) %>
+  </main>
 </body>
+
 </html>
