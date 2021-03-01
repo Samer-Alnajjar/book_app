@@ -31,12 +31,16 @@ This application will provide the user to search for any book either by title or
 ## Change Log
 <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples: -->
 
-28-02-2021 1:45pm - MAke the application load quickly.
-28-02-2021 2:15pm - create the /hello directory.
-28-02-2021 3:15pm - create book constructor with superagent.
-28-02-2021 3:45pm - create post request "/searches".
-28-02-2021 4:00pm - create error.ejs.
-28-02-2021 4:15pm - create home directory "/".
+- 28-02-2021 1:45pm - MAke the application load quickly.
+- 28-02-2021 2:15pm - create the /hello directory.
+- 28-02-2021 3:15pm - create book constructor with superagent.
+- 28-02-2021 3:45pm - create post request "/searches".
+- 28-02-2021 4:00pm - create error.ejs.
+- 01-03-2021 1:30pm - Create the Database.
+- 01-03-2021 2:00pm - refactoring the home page.
+- 01-03-2021 3:00pm - Create a route with path params.
+- 01-03-2021 3:30pm - Create the partial ejs.
+- 01-03-2021 6:30pm - Push the data to the database when requesting from API..
 
 ## Credits and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
@@ -107,7 +111,7 @@ Finish time: 4:00
 Actual time needed to complete: 0.15 hour
 
 
-===================================================================================================================================================
+=======================================================================================
 
 
 Number and name of feature: create home directory "/"
@@ -118,3 +122,66 @@ Start time: 4:00
 Finish time: 4:15
 
 Actual time needed to complete: 0.15 hour
+
+
+=============================================================================================================================================================================
+
+
+Number and name of feature: Create the Database
+Estimate of time needed to complete: 1:00 hour
+
+Start time: 1:00
+
+Finish time: 1:30
+
+Actual time needed to complete: 0.30 hour
+
+================================================================
+
+
+Number and name of feature: refactoring the home page
+Estimate of time needed to complete: 1:00 hour
+
+Start time: 1:30
+
+Finish time: 2:00
+
+Actual time needed to complete: 0.30 hour
+
+================================================================
+
+
+Number and name of feature: Create a route with path params
+Estimate of time needed to complete: 1:00 hour
+
+Start time: 2:00
+
+Finish time: 3:00
+
+Actual time needed to complete: 1.00 hour
+
+
+================================================================
+
+
+Number and name of feature: Create the partial ejs 
+Estimate of time needed to complete: 1:00 hour
+
+Start time: 3:00
+
+Finish time: 4:00
+
+Actual time needed to complete: 1.00 hour
+
+
+================================================================
+
+
+Number and name of feature: Push the data to the database when requesting from API.
+Estimate of time needed to complete: 1:00 hour
+
+Start time: 4:00
+
+Finish time: 6:30
+
+Actual time needed to complete: 2.30 hour
