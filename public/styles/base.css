@@ -13,23 +13,22 @@ header{
   padding-left: 10px;
 }
 
-
 body{
   background-color: lightgray;
 }
 
-
 @media  (min-width: 600px){
   
   .main{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    justify-content: space-around; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:  auto ; 
   }
   section{
     margin: 5%;
     padding: 2%;
-    width: 15%;
-   
+    
   }
 
   input[type=submit]{
@@ -40,8 +39,24 @@ body{
     width: 90%;
 
   }
- 
+  .form{
 
+    margin: 10% 5% 10% 5%;
+    padding: 2%;
+    background-color: rgb(246, 246, 246);
+    text-align: center;
+    border: rgb(165, 98, 98) solid 1px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px 0 rgba(85, 85, 85, 0.376), 0 6px 20px 0 rgba(78, 77, 77, 0.445);
+    width: 50%;
+    
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+  }
+ 
 
 
 }

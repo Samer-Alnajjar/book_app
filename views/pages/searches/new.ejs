@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,23 +8,32 @@
   <link rel="stylesheet" href="/styles/style.css">
   <title>Search form</title>
 </head>
+
 <body>
-  
-  <header><h2>Best Book!</h2></header>
 
-  <div class="show"><h1>Search by Title and Author</h1></div>
+  <header>
+    <h2>Best Book!</h2>
+  </header>
 
+  <div class="show">
+    <h1>Search by Title and Author</h1>
+  </div>
 
-  <form action="/searches" method="POST">
-    
-    <input type="text" name="q" placeholder="anything+title or author">
+  <main class="main">
 
-    <label for="author">Author</label>
-    <input id="author" type="radio" name="searchBy" value="author">
-    <label for="title">Title</label>
-    <input id="title" type="radio" name="searchBy" value="title">
+    <div class="form">
+      <form action="/searches" method="POST">
 
-    <input type="submit">
-  </form>
+        <input type="text" name="q" placeholder="anything+title or author">
+        <label for="author">Author</label>
+        <input id="author" type="radio" name="searchBy" value="author">
+        <label for="title">Title</label>
+        <input id="title" type="radio" name="searchBy" value="title">
+        <input type="submit">
+
+      </form>
+  </div>
+  </main>
 </body>
+
 </html>
