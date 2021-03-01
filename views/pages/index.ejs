@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/styles/style.css">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Book Results</title>
 </head>
+
 <body>
-  <h1>Hello World!!</h1>
+
+    <header>
+        <h1>Best Book!</h1>
+    </header>
+
+    <div class="show">
+        <h1><span><%= counter %></span> Saved Books</h1>
+    </div>
+    <main class="main">
+        <% book_data.forEach(data=>{ %>
+          <%- include('books/detail',{book:data})%>
+            <% }) %>
+    </main>
 </body>
+
 </html>
