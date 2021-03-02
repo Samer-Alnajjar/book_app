@@ -5,6 +5,7 @@ const express = require('express');
 const cors = require('cors');
 const superagent = require('superagent');
 const pg = require('pg');
+const methodOverride = require("method-override");
 
 
 // Configure packages
@@ -15,6 +16,9 @@ app.use(cors());
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride("_method"));
+
+
 const client = new pg.Client(process.env.DATABASE_URL);
 // const client = new pg.Client({ connectionString: process.env.DATABASE_URL, ssl: { rejectUnauthorized: false } });
 
@@ -36,6 +40,8 @@ app.get('/books/:id', viewDetails);
 
 app.post('/books', storeToDB);
 
+app.put("/books/:id", editBook);
+
 
 
 app.get("*", (req, res) => {
@@ -46,7 +52,21 @@ app.get("*", (req, res) => {
 
 //handlers function
 
+function editBook(req, res) {
+  let id = req.params.id;
+  let dataUpdated = req.body;
 
+  let queryDB = `UPDATE book SET author=$1, title=$2, image_url=$3, description=$4 WHERE id=$5;`;
+  let safeValues = [dataUpdated.author, dataUpdated.title, dataUpdated.img, dataUpdated.description, id];
+
+  client.query(queryDB, safeValues)
+    .then(() => {
+      res.redirect(`/books/${id}`)
+    })
+    .catch(error => {
+      console.log(`Error while updating the data, ${error}`);
+    })
+}
 
 function checkDB(req, res) {
 

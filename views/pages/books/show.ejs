@@ -3,38 +3,29 @@
 
 <%- include("../../layout/head")%>
 
-
     <body>
-
         <%- include("../../layout/header")%>
-
-
             <main class="main">
                 <section>
                     <%- include('./detail')%>
                         <!-- <div class="pr"> -->
-                            <p id="para">
-                                <%= book.description %>
-                            </p>
+                        <p id="para">
+                            <%= book.description %>
+                        </p>
                         </div>
                         <div>
                             <div>
-                                <form action="" method="POST">
-                                    <button type="submit">Update Details</button>
-                                </form>
+                                <button type="submit">Update Details</button>
                             </div>
                             <div>
-                                <form action="" method="POST">
-                                    <button type="submit">Delete Book</button>
-                                </form>
+                                <button type="submit">Delete Book</button>
                             </div>
                         </div>
                         <div> <a class="a-btn" href="/">Home</a></div>
                 </section>
+                <%- include("edit") %>
             </main>
-
             <%- include("../../layout/footer")%>
-
     </body>
 
 </html>
