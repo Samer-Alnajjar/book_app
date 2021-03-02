@@ -19,8 +19,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
 
-const client = new pg.Client(process.env.DATABASE_URL);
-// const client = new pg.Client({ connectionString: process.env.DATABASE_URL, ssl: { rejectUnauthorized: false } });
+// const client = new pg.Client(process.env.DATABASE_URL);
+const client = new pg.Client({ connectionString: process.env.DATABASE_URL, ssl: { rejectUnauthorized: false } });
 
 // routes
 // app.get('/hello', (req, res) => {
@@ -42,14 +42,29 @@ app.post('/books', storeToDB);
 
 app.put("/books/:id", editBook);
 
+app.delete("/books/:id", deleteBook);
+
 
 app.get("*", (req, res) => {
   res.render("pages/error");
 })
 
 
-
 //handlers function
+
+function deleteBook(req, res) {
+  let id = req.params.id;
+  let deleteQuery = 'DELETE FROM book WHERE id=$1';
+  let safeValues = [id];
+
+  client.query(deleteQuery, safeValues)
+    .then(() => {
+      res.redirect("/");
+    })
+    .catch(error => {
+      console.log("Error occurred while deleting from Database", error);
+    })
+}
 
 function editBook(req, res) {
   let id = req.params.id;

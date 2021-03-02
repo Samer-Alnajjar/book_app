@@ -41,6 +41,8 @@ This application will provide the user to search for any book either by title or
 - 01-03-2021 3:00pm - Create a route with path params.
 - 01-03-2021 3:30pm - Create the partial ejs.
 - 01-03-2021 6:30pm - Push the data to the database when requesting from API..
+- 02-03-2021 2:00pm - Enable the client to update the details of the book.
+- 02-03-2021 2:30pm - Enable the client to delete a book.
 
 ## Credits and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
@@ -189,11 +191,25 @@ Actual time needed to complete: 2.30 hour
 ================================================================
 
 
-Number and name of feature: Push the data to the database when requesting from API.
+Number and name of feature: Enable the client to update the details of the book.
 Estimate of time needed to complete: 1:00 hour
 
-Start time: 4:00
+Start time: 1:00
 
-Finish time: 6:30
+Finish time: 2:00
 
-Actual time needed to complete: 2.30 hour
+Actual time needed to complete: 1.00 hour
+
+
+================================================================
+
+
+Number and name of feature: Enable the client to delete a book.
+
+Estimate of time needed to complete: 1:00 hour
+
+Start time: 2:00
+
+Finish time: 2:30
+
+Actual time needed to complete: 0.30 hour
