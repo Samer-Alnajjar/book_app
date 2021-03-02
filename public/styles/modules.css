@@ -19,7 +19,7 @@ img{
   
   .inside{
     margin: 1%;
-    overflow: scroll;
+    overflow-y: scroll;
   }
   section:hover {
   
@@ -81,6 +81,11 @@ input[type=submit]{
 
   .update {
     display: none;
+  }
+
+  textarea {
+    width: 85%;
+    height: 30%;
   }
 
 
