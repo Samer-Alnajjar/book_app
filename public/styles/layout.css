@@ -35,6 +35,10 @@ footer{
   position: fixed;
   bottom: 0;
 }
+footer h3{
+  color: #eeeeee;
+  display: none;
+}
 .circle{
   border-radius: 50%;
   background-color: rgba(172, 172, 172, 0.554);
@@ -69,6 +73,9 @@ footer{
 
   footer div{
     display: none;
+  }
+  footer h3{
+    display: inline;
   }
 
 }
