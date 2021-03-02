@@ -18,10 +18,6 @@
                                 <button class="update-button" type="submit">Update Details</button>
                             </div>
                             <form action="/books/<%= book.id %>?_method=DELETE" method="POST">
-                                <input type="text" hidden hidden name="img" value="<%=book.image_url%>">
-                                <input type="text" hidden name="title" name="searchBy" value="<%=book.title%>">
-                                <input type="text" hidden name="author" value="<%=book.author%>">
-                                <input type="text" hidden name="description" value="<%=book.description%>">
                                 <button class="delete-button" type="submit">Delete Book</button>
                             </form>
                         </div>
