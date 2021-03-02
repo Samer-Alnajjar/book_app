@@ -78,3 +78,12 @@ input[type=submit]{
     width: 50px;
     border-radius: 50%;
   }
+
+  .update {
+    display: none;
+  }
+
+
+  .update-button {
+    cursor: pointer;
+  }

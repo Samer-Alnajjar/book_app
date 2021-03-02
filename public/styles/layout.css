@@ -16,7 +16,7 @@ section{
   border-radius: 5px;
   box-shadow: 0 10px 10px 0 rgba(85, 85, 85, 0.376), 0 6px 20px 0 rgba(78, 77, 77, 0.445);
   overflow: hidden;
-  height: 400px;
+  height: 500px;
   display: grid;
   grid-template-rows: 1fr  4fr 1fr ; 
   column-gap: 10px;
