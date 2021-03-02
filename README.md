@@ -185,3 +185,15 @@ Start time: 4:00
 Finish time: 6:30
 
 Actual time needed to complete: 2.30 hour
+
+================================================================
+
+
+Number and name of feature: Push the data to the database when requesting from API.
+Estimate of time needed to complete: 1:00 hour
+
+Start time: 4:00
+
+Finish time: 6:30
+
+Actual time needed to complete: 2.30 hour
