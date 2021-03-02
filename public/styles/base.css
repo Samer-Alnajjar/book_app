@@ -48,6 +48,11 @@ nav div:hover{
   background-color: #121212;
   color: #eeeeee;
 }
+.a-btn:hover,input[type=submit]:hover{
+  border: solid #121212 1px;
+  background-color: #eeeeee;
+  color: #121212;
+}
 
 body{
   background-color: rgb(217, 223, 230);

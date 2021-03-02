@@ -69,11 +69,11 @@ footer h3{
     grid-row-end: 3;
 
   }
- 
 
   footer div{
     display: none;
   }
+  
   footer h3{
     display: inline;
   }
