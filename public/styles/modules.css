@@ -83,8 +83,9 @@ input[type=submit]{
     display: none;
   }
 
-  #desc {
+  textarea {
     height: 30%;
+    width: 85%;
   }
 
 
