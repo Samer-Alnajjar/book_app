@@ -41,10 +41,10 @@
           </div>
             <form action="/books" method="POST">
 
-              <input type="text" style="display:none" name="img" value="<%=data.img%>">
-              <input type="text" style="display:none" name="title" name="searchBy" value="<%=data.bookTitle%>">
-              <input type="text" style="display:none" name="author" value="<%=data.authorNames%>">
-              <input type="text" style="display:none" name="description" value="<%=data.description%>">
+              <input type="text" hidden name="img" value="<%=data.img%>">
+              <input type="text" hidden name="title" name="searchBy" value="<%=data.bookTitle%>">
+              <input type="text" hidden name="author" value="<%=data.authorNames%>">
+              <input type="text" hidden name="description" value="<%=data.description%>">
 
               <div class="btn">
                <button type="submit">Select this Book</button>
