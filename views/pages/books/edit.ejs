@@ -1,0 +1,10 @@
+<section>
+  <form action="/books/<%= book.id %>?_method=PUT" method="POST">
+    <input type="text" name="img" value="<%=book.image_url%>">
+    <input type="text" name="title" name="searchBy" value="<%=book.title%>">
+    <input type="text" name="author" value="<%=book.author%>">
+    <input type="text" name="description" value="<%=book.description%>">
+    <button type="submit">Update Book</button>
+    <button>Cancel</button>
+  </form>
+</section>
